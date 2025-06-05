@@ -1,4 +1,4 @@
-package com.example.simple_project.model;
+package com.example.simple_project.model.db.User;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -15,4 +15,7 @@ public interface UserDao {
 
     @Query("SELECT * FROM user")
     LiveData<List<User>> getAllUsers();
+
+    @Query("DELETE FROM user")
+    void deleteAll();
 }

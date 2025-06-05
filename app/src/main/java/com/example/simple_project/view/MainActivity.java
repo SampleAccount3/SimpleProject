@@ -13,14 +13,14 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.simple_project.R;
-import com.example.simple_project.model.User;
+import com.example.simple_project.model.db.User.User;
 import com.example.simple_project.viewmodel.UserViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
     private UserViewModel userViewModel;
     TextView tvItemList;
-    Button btnAddUser;
+    Button btnAddUser, btnDeleteUser, btnGetApi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         initUI();
 
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
@@ -45,14 +46,28 @@ public class MainActivity extends AppCompatActivity {
             }
             tvItemList.setText(builder.toString());
         });
+
     }
 
     private void initUI(){
-        btnAddUser = findViewById(R.id.btnAddUser);
+        btnAddUser = findViewById(R.id.btn_add_user);
+        btnDeleteUser = findViewById(R.id.btn_delete_user);
+        btnGetApi = findViewById(R.id.btn_get_api);
+
         btnAddUser.setOnClickListener(v -> {
             User user = new User();
             user.setName("John Doe");
             userViewModel.insert(user);
         });
+        btnDeleteUser.setOnClickListener(v -> {
+            userViewModel.deleteAll();
+        });
+//        btnGetApi.setOnClickListener(v -> {
+//            userViewModel.ge.observe(this, users -> {
+//                StringBuilder builder = new StringBuilder();
+//                for (User item : users) {
+//                    builder.append(item.getName()).append(" ");
+//                    Log.d("USERNAME", "User name is: " + item.getName());
+//        });
     }
 }

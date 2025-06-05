@@ -1,4 +1,4 @@
-package com.example.simple_project.model;
+package com.example.simple_project.model.db.User;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

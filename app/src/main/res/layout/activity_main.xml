@@ -18,14 +18,41 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnAddUser"
+        android:id="@+id/btn_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add User"
+        app:layout_constraintBottom_toTopOf="@+id/btn_delete_user"
+        app:layout_constraintEnd_toEndOf="@+id/tvItemList"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/tvItemList"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemList"
+        app:layout_constraintVertical_bias="0.365" />
+
+    <Button
+        android:id="@+id/btn_delete_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:text="Delete User"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Add User"
-        app:layout_constraintTop_toBottomOf="@+id/tvItemList" />
+        app:layout_constraintEnd_toEndOf="@+id/tvItemList"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/tvItemList"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemList"
+        app:layout_constraintVertical_bias="0.441" />
+
+    <Button
+        android:id="@+id/btn_get_api"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Get Api"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvItemList"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/tvItemList"
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete_user"
+        app:layout_constraintVertical_bias="0.739" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
