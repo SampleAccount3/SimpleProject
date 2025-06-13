@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">simple_project</string>
+    <string name="calculator">Calculator</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+<!--    <string name=""></string>-->
+
 </resources>

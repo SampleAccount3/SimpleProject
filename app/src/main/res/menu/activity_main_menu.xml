@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <group>
+        <item android:id="@+id/ic_calculator"
+            android:icon="@drawable/baseline_calculate_24"
+            android:title="@string/calculator"/>
+    </group>
 </menu>
